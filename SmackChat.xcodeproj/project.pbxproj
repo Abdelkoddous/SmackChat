@@ -12,6 +12,8 @@
 		0965DC272088C27D00544513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0965DC252088C27D00544513 /* Main.storyboard */; };
 		0965DC292088C27F00544513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0965DC282088C27F00544513 /* Assets.xcassets */; };
 		0965DC2C2088C27F00544513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0965DC2A2088C27F00544513 /* LaunchScreen.storyboard */; };
+		09827A9A208943E7007C8C7A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09827A98208943E7007C8C7A /* SWRevealViewController.m */; };
+		0AB8DD25067D2A0AA6EED001 /* Pods_SmackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661110B0A26D87D88433A723 /* Pods_SmackChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,12 @@
 		0965DC282088C27F00544513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0965DC2B2088C27F00544513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0965DC2D2088C27F00544513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09827A97208943E6007C8C7A /* SmackChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmackChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		09827A98208943E7007C8C7A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		09827A99208943E7007C8C7A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		27AD435DFFBBA3B09A8A973C /* Pods-SmackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.release.xcconfig"; sourceTree = "<group>"; };
+		647270978FF309725783BF3C /* Pods-SmackChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.debug.xcconfig"; sourceTree = "<group>"; };
+		661110B0A26D87D88433A723 /* Pods_SmackChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB8DD25067D2A0AA6EED001 /* Pods_SmackChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				0965DC202088C27D00544513 /* SmackChat */,
 				0965DC1F2088C27D00544513 /* Products */,
+				42B72C2A89C7FE7108731901 /* Pods */,
+				2E943E00E236E2859824AFCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +65,7 @@
 		0965DC202088C27D00544513 /* SmackChat */ = {
 			isa = PBXGroup;
 			children = (
+				09827A96208943D3007C8C7A /* Supporting Files */,
 				0965DC212088C27D00544513 /* AppDelegate.swift */,
 				0965DC232088C27D00544513 /* ViewController.swift */,
 				0965DC252088C27D00544513 /* Main.storyboard */,
@@ -64,6 +76,33 @@
 			path = SmackChat;
 			sourceTree = "<group>";
 		};
+		09827A96208943D3007C8C7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09827A99208943E7007C8C7A /* SWRevealViewController.h */,
+				09827A98208943E7007C8C7A /* SWRevealViewController.m */,
+				09827A97208943E6007C8C7A /* SmackChat-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E943E00E236E2859824AFCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661110B0A26D87D88433A723 /* Pods_SmackChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42B72C2A89C7FE7108731901 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				647270978FF309725783BF3C /* Pods-SmackChat.debug.xcconfig */,
+				27AD435DFFBBA3B09A8A973C /* Pods-SmackChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0965DC302088C27F00544513 /* Build configuration list for PBXNativeTarget "SmackChat" */;
 			buildPhases = (
+				A1B863C1BEC7C099C5E3A0E1 /* [CP] Check Pods Manifest.lock */,
 				0965DC1A2088C27D00544513 /* Sources */,
 				0965DC1B2088C27D00544513 /* Frameworks */,
 				0965DC1C2088C27D00544513 /* Resources */,
+				5B979B461CD0B2CD2D2A2FB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					0965DC1D2088C27D00544513 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +172,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B979B461CD0B2CD2D2A2FB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B863C1BEC7C099C5E3A0E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmackChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0965DC1A2088C27D00544513 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +224,7 @@
 			files = (
 				0965DC242088C27D00544513 /* ViewController.swift in Sources */,
 				0965DC222088C27D00544513 /* AppDelegate.swift in Sources */,
+				09827A9A208943E7007C8C7A /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,17 +366,22 @@
 		};
 		0965DC312088C27F00544513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647270978FF309725783BF3C /* Pods-SmackChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MCJTBHU8R2;
 				INFOPLIST_FILE = SmackChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZAK.SmackChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmackChat/Supporting Files/SmackChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,17 +389,21 @@
 		};
 		0965DC322088C27F00544513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AD435DFFBBA3B09A8A973C /* Pods-SmackChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MCJTBHU8R2;
 				INFOPLIST_FILE = SmackChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZAK.SmackChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmackChat/Supporting Files/SmackChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
